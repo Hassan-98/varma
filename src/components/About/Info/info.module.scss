@@ -1,0 +1,135 @@
+@import "../../../styles/mixins.scss";
+
+.info {
+  padding: 100px 0;
+
+  h2 {
+    max-width: 60%;
+    font-weight: bold;
+    color: #1c1c1c;
+    margin: 10px auto 30px;
+    text-align: center;
+
+    @include lg {
+      max-width: 70%;
+    }
+
+    @include md {
+      max-width: 80%;
+    }
+
+    @include sm {
+      max-width: 100%;
+    }
+  }
+
+  .subtitle {
+    text-align: center;
+    max-width: 60%;
+    margin: 10px auto 50px;
+    color: #545454;
+    font-size: 15px;
+
+    @include lg {
+      max-width: 70%;
+    }
+
+    @include md {
+      max-width: 80%;
+    }
+
+    @include sm {
+      max-width: 100%;
+    }
+  }
+
+  .video {
+    height: 550px;
+    background: url('/images/video-bg.jpg') no-repeat;
+    background-size: 100% 100%;
+    margin-bottom: 50px;
+    position: relative;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: unset;
+
+    @include xl {
+      height: 500px;
+    }
+
+    @include lg {
+      height: 450px;
+    }
+
+    @include md {
+      height: 400px;
+    }
+
+    @include sm {
+      height: 350px;
+    }
+
+    span {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #fff;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      outline: 0px solid rgba(255, 255, 255, 0.5);
+      animation: pulseVideo 1.25s linear infinite;
+
+      i {
+        font-size: 22px;
+      }
+    }
+  }
+
+  .pane {
+    margin-top: 30px;
+    max-width: 75%;
+
+    .sub_title {
+      letter-spacing: 5px;
+      color: #1c1c1c;
+      text-transform: uppercase;
+      width: fit-content;
+      margin: 0 0 20px;
+      padding: 3px 12px;
+      border: 1px solid #CECECE;
+    }
+
+    h3 {
+      font-weight: bold;
+      margin-bottom: 25px;
+    }
+
+    .text {
+      margin-bottom: 15px;
+      font-size: 15px;
+      color: #545454;
+    }
+
+    ul {
+      list-style: disc;
+      padding-inline-start: 20px;
+      padding-top: 1px;
+
+      li {
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+@keyframes pulseVideo {
+  100% {
+    outline: 30px solid rgba(255, 255, 255, 0.0);
+  }
+}

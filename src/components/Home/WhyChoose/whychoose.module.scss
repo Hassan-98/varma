@@ -1,0 +1,61 @@
+@import "../../../styles/mixins.scss";
+
+.whychoose {
+  padding: 120px 0 150px;
+  background: url('/images/footer-bg.png');
+  background-position: center center;
+  background-size: cover;
+
+  .sub_title {
+    letter-spacing: 7px;
+    color: #1c1c1c;
+    text-transform: uppercase;
+    width: fit-content;
+    margin: 0 auto 20px;
+    padding: 4px 15px;
+    border: 1px solid #dbdbdb;
+    font-size: 14px;
+
+    @include sm {
+      margin: 0 auto 20px;
+    }
+  }
+
+  .description {
+    max-width: 60%;
+    margin: 0 auto 50px;
+    text-align: center;
+    color: #545454;
+
+    @include lg {
+      max-width: 75%;
+    }
+
+    @include sm {
+      max-width: 100%;
+    }
+  }
+
+  ul {
+    max-width: 75%;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 40px;
+    row-gap: 35px;
+    margin: 10px auto 0;
+    justify-content: center;
+
+    @include xl {
+      max-width: 100%;
+    }
+
+    li {
+      color: var(--primary-color-1);
+      font-weight: 500;
+
+      i {
+        margin-inline-end: 8px;
+      }
+    }
+  }
+}

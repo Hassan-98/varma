@@ -1,0 +1,150 @@
+@import "../../../styles/mixins";
+
+.navbar {
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+      @include lg {
+        padding: 20px 0;
+      }
+    }
+
+    .navbar_toggler {
+      display: none;
+      cursor: pointer;
+      font-size: 24px;
+      color: var(--primary-color-1);
+
+      @include lg {
+        display: block;
+      }
+    }
+
+    .links {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+
+      @include lg {
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding: 60px 25px 35px;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 10;
+        width: fit-content;
+        height: 100%;
+        background-color: #fff;
+        box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
+
+        &.show {
+          right: 0;
+        }
+      }
+
+
+      .close {
+        display: none;
+        cursor: pointer;
+        position: absolute;
+        top: 15px;
+        left: 30px;
+        font-size: 20px;
+        color: var(--primary-color-1);
+
+        @include lg {
+          display: block;
+        }
+      }
+
+      .links_list {
+        @include lg {
+          width: 100%;
+        }
+
+        ul {
+          display: flex;
+          list-style: none;
+
+          @include lg {
+            flex-wrap: wrap;
+            flex-direction: column;
+          }
+
+          li {
+            a {
+              padding: 35px 25px;
+              height: 100%;
+              text-decoration: none;
+              color: #000;
+              display: block;
+              font-weight: 400;
+              border-bottom: 2px solid transparent;
+
+              &:hover,
+              &.active {
+                color: var(--primary-color-1);
+                border-color: var(--primary-color-1);
+                background-color: rgba(var(--primary-color-rgb-1), 0.03);
+              }
+
+              @include lg {
+                padding: 15px 25px;
+                border-radius: 5px;
+                border-bottom: 0;
+                margin-bottom: 5px;
+                width: 270px;
+
+                &:hover,
+                &.active {
+                  background-color: rgba(var(--primary-color-rgb-1), 0.1);
+                }
+              }
+
+              @include xs {
+                width: 230px;
+              }
+
+              @include xxs {
+                width: 180px;
+              }
+            }
+          }
+
+        }
+      }
+
+      .button {
+        margin-inline-start: 25px;
+
+        button {
+          background-color: var(--primary-color-2);
+          border: 0;
+          padding: 16px 37px;
+          color: #000;
+
+          &:hover {
+            background-color: #000;
+            color: #fff;
+          }
+        }
+
+        @include lg {
+          margin-inline-start: 0;
+          text-align: center;
+
+          button {
+            border-radius: 5px;
+          }
+        }
+      }
+    }
+
+
+  }
+}

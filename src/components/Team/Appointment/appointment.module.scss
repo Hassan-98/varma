@@ -1,0 +1,119 @@
+@import "../../../styles/mixins.scss";
+
+.appointment {
+  margin-bottom: 100px;
+
+  .schedule {
+    background-color: var(--primary-color-1);
+    padding: 140px 0;
+    text-align: center;
+    position: relative;
+
+    @include md {
+      padding: 100px 30px;
+    }
+
+    .sub_title {
+      letter-spacing: 6px;
+      color: #fff;
+      text-transform: uppercase;
+      width: fit-content;
+      margin: 0 auto 20px;
+      padding: 4px 12px;
+      border: 1px solid #dbdbdb;
+      font-size: 14px;
+
+      @include sm {
+        margin: 0 auto 20px;
+        font-size: 13px;
+        letter-spacing: 4px;
+        padding: 3px 10px;
+      }
+    }
+
+    p:not(.sub_title) {
+      color: #fff;
+      font-size: 50px;
+      font-weight: bold;
+      max-width: 60%;
+      margin: 0 auto;
+      line-height: 65px;
+
+      @include md {
+        max-width: 70%;
+      }
+
+      @include sm {
+        max-width: 75%;
+        font-size: 33px;
+        line-height: 50px;
+      }
+
+      @include xs {
+        max-width: 100%;
+        font-size: 30px;
+      }
+    }
+
+    .actions {
+      margin-top: 50px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+
+      span {
+        color: #fff;
+
+        @include sm {
+          display: block;
+          width: 100%;
+        }
+      }
+
+      button {
+        padding: 17px 40px;
+        border: 1px solid transparent;
+
+        @include xs {
+          padding: 12px 30px;
+        }
+
+        &:hover {
+          background-color: var(--primary-color-1);
+          color: #fff;
+          border-color: #fff;
+        }
+
+        &:nth-of-type(2) {
+          background-color: #fff;
+          color: #000;
+
+          &:hover {
+            background-color: var(--primary-color-1);
+            color: #fff;
+            border-color: #fff;
+          }
+        }
+      }
+    }
+  }
+
+  .image {
+    height: 100%;
+
+    img {
+      width: 100%;
+      object-position: top;
+
+      @include lg {
+        object-fit: fill;
+      }
+
+      @include sm {
+        height: 400px;
+      }
+    }
+  }
+}

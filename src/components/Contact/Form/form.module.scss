@@ -1,0 +1,56 @@
+@import "../../../styles/mixins.scss";
+
+.form {
+  padding: 100px;
+  margin-bottom: 100px;
+  background-color: #DCEDFE;
+
+  @include sm {
+    padding: 50px;
+  }
+
+  @include xxs {
+    padding: 30px;
+  }
+
+  .input {
+    label {
+      display: block;
+      width: 100%;
+      font-weight: 600;
+      margin-bottom: 5px;
+      margin-inline-start: 5px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      outline: none;
+      border: 1px solid #DCDCDC;
+      padding: 18px 30px;
+      resize: none;
+      font-size: 15px;
+
+      @include xxs {
+        padding: 14px 25px;
+      }
+
+      &::placeholder {
+        color: #B9B9B9;
+      }
+    }
+  }
+
+  button {
+    background-color: var(--primary-color-1);
+    color: #fff;
+    padding: 17px 40px;
+    margin: 30px auto 0;
+    display: block;
+
+    &:hover {
+      background-color: var(--primary-color-2);
+      color: var(--primary-color-1);
+    }
+  }
+}

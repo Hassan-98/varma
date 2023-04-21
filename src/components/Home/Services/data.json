@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "title": "Angioplasty",
+    "icon": "/images/icons/angioplasty.svg"
+  },
+  {
+    "id": 2,
+    "title": "Cardiology",
+    "icon": "/images/icons/cardiology.svg"
+  },
+  {
+    "id": 3,
+    "title": "Dental",
+    "icon": "/images/icons/dental.svg",
+    "image": "/images/doc-1.png"
+  },
+  {
+    "id": 4,
+    "title": "Eye Care",
+    "icon": "/images/icons/eyecare.svg",
+    "image": "/images/doc-2.png"
+  },
+  {
+    "id": 5,
+    "title": "Endocrinology",
+    "icon": "/images/icons/endocrinology.svg"
+  },
+  {
+    "id": 6,
+    "title": "Orthopaedics",
+    "icon": "/images/icons/orthopaedics.svg"
+  }
+]

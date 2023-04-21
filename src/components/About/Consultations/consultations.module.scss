@@ -1,0 +1,128 @@
+@import "../../../styles/mixins.scss";
+
+.consultations {
+  .schedule {
+    margin-top: 50px;
+    background-color: var(--primary-color-1);
+    padding: 140px 0;
+    text-align: center;
+    position: relative;
+
+    @include md {
+      padding: 100px 30px;
+    }
+
+    &::before {
+      content: '';
+      width: 270px;
+      height: 270px;
+      background: url('/images/shape1.svg') no-repeat;
+      background-size: cover;
+      position: absolute;
+      top: 0;
+      right: -40px;
+
+      @include lg {
+        width: 220px;
+        height: 220px;
+        right: -10px;
+      }
+
+      @include md {
+        width: 180px;
+        height: 180px;
+      }
+    }
+
+    &::after {
+      content: '';
+      width: 270px;
+      height: 270px;
+      background: url('/images/shape1.svg') no-repeat;
+      background-size: cover;
+      position: absolute;
+      bottom: 0;
+      left: -40px;
+      rotate: 180deg;
+
+      @include lg {
+        width: 220px;
+        height: 220px;
+        left: -10px;
+      }
+
+      @include md {
+        width: 180px;
+        height: 180px;
+      }
+    }
+
+    p {
+      color: #fff;
+      font-size: 50px;
+      font-weight: bold;
+      max-width: 40%;
+      margin: 0 auto;
+      line-height: 65px;
+
+      @include md {
+        max-width: 60%;
+      }
+
+      @include sm {
+        max-width: 65%;
+        font-size: 33px;
+        line-height: 50px;
+      }
+
+      @include xs {
+        max-width: 100%;
+        font-size: 30px;
+      }
+    }
+
+    .actions {
+      margin-top: 50px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+
+      span {
+        color: #fff;
+
+        @include sm {
+          display: block;
+          width: 100%;
+        }
+      }
+
+      button {
+        padding: 17px 40px;
+        border: 1px solid transparent;
+
+        @include xs {
+          padding: 12px 30px;
+        }
+
+        &:hover {
+          background-color: var(--primary-color-1);
+          color: #fff;
+          border-color: #fff;
+        }
+
+        &:nth-of-type(2) {
+          background-color: #fff;
+          color: #000;
+
+          &:hover {
+            background-color: var(--primary-color-1);
+            color: #fff;
+            border-color: #fff;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,124 @@
+@import "../../../styles/mixins.scss";
+
+.appointment {
+  padding: 150px 0;
+
+  .partners {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    @include sm {
+      justify-content: center;
+    }
+
+    .partner {
+      img {
+        object-fit: contain;
+        cursor: pointer;
+        transition: all 0.4s ease;
+
+        &:hover {
+          filter: grayscale(1);
+        }
+      }
+    }
+  }
+
+  .schedule {
+    margin-top: 80px;
+    background-color: var(--primary-color-1);
+    padding: 120px 0;
+    text-align: center;
+    position: relative;
+
+    @include md {
+      padding: 100px 30px;
+    }
+
+    &::before {
+      content: '';
+      width: 270px;
+      height: 270px;
+      background: url('/images/shape1.svg') no-repeat;
+      background-size: cover;
+      position: absolute;
+      top: 0;
+      right: -40px;
+
+      @include lg {
+        width: 220px;
+        height: 220px;
+        right: -10px;
+      }
+
+      @include md {
+        width: 180px;
+        height: 180px;
+      }
+    }
+
+    &::after {
+      content: '';
+      width: 270px;
+      height: 270px;
+      background: url('/images/shape1.svg') no-repeat;
+      background-size: cover;
+      position: absolute;
+      bottom: 0;
+      left: -40px;
+      rotate: 180deg;
+
+      @include lg {
+        width: 220px;
+        height: 220px;
+        left: -10px;
+      }
+
+      @include md {
+        width: 180px;
+        height: 180px;
+      }
+    }
+
+    p {
+      color: #fff;
+      font-size: 38px;
+      max-width: 50%;
+      margin: 0 auto;
+      line-height: 45px;
+
+      @include md {
+        max-width: 60%;
+      }
+
+      @include sm {
+        max-width: 65%;
+        font-size: 33px;
+      }
+
+      @include xs {
+        max-width: 100%;
+        font-size: 30px;
+      }
+    }
+
+    button {
+      margin-top: 50px;
+      padding: 17px 40px;
+      border: 1px solid transparent;
+
+      @include xs {
+        padding: 12px 30px;
+      }
+
+      &:hover {
+        background-color: var(--primary-color-1);
+        color: #fff;
+        border-color: #fff;
+      }
+    }
+  }
+}

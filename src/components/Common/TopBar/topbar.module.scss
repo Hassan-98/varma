@@ -1,0 +1,42 @@
+@import "../../../styles/mixins";
+
+.topbar {
+  padding: 15px 0;
+  background-color: var(--primary-color-1);
+  color: #fff;
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    p {
+      color: inherit;
+      font-weight: normal;
+      font-size: 14px;
+    }
+
+    .icons {
+      display: flex;
+      gap: 30px;
+
+      @include xs {
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .icon {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        i {
+          background-color: #095FBA;
+          padding: 10px;
+          border-radius: 50%;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

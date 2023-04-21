@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "image": "/images/icons/biotechnology.svg",
+    "title": "Bio Technology",
+    "text": "Our team of highly trained professionals uses the latest healing technologies."
+  },
+  {
+    "id": 2,
+    "image": "/images/icons/vaccine.svg",
+    "title": "Vaccine",
+    "text": "Our team of highly trained professionals uses the latest healing technologies."
+  },
+  {
+    "id": 3,
+    "image": "/images/icons/latesttechnology.svg",
+    "title": "Latest Technology",
+    "text": "Our team of highly trained professionals uses the latest healing technologies."
+  },
+  {
+    "id": 4,
+    "image": "/images/icons/expertdoctors.svg",
+    "title": "Expert Doctors",
+    "text": "Our team of highly trained professionals uses the latest healing technologies."
+  }
+]

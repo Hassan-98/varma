@@ -1,0 +1,97 @@
+@import "../../../styles/mixins.scss";
+
+.header {
+  padding: 160px 0;
+  background: url('/images/header-banner.png') no-repeat;
+  background-size: cover;
+
+  @include md {
+    background-position: 25% 0%;
+  }
+
+  @include xs {
+    background-position: 40% 0%;
+  }
+
+  .sub_title {
+    background-color: var(--primary-color-2);
+    width: fit-content;
+    color: #1c1c1c;
+    padding: 3px 10px;
+    letter-spacing: 5px;
+    font-size: 15px;
+
+    @include sm {
+      margin: 0 auto 10px;
+      letter-spacing: 5px;
+    }
+
+    @include xs {
+      letter-spacing: 3px;
+    }
+  }
+
+  h1 {
+    max-width: 45%;
+    font-weight: bold;
+    margin-bottom: 20px;
+
+    @include xl {
+      max-width: 50%;
+    }
+
+    @include lg {
+      max-width: 55%;
+    }
+
+    @include md {
+      max-width: 70%;
+    }
+
+    @include sm {
+      max-width: 100%;
+      text-align: center;
+    }
+  }
+
+  .text {
+    max-width: 30%;
+    margin-bottom: 30px;
+    color: #1c1c1c;
+
+    @include xl {
+      max-width: 35%;
+    }
+
+    @include lg {
+      max-width: 40%;
+    }
+
+    @include md {
+      max-width: 60%;
+    }
+
+    @include sm {
+      max-width: 100%;
+      text-align: center;
+    }
+  }
+
+  button {
+    background-color: var(--primary-color-1);
+    color: #fff;
+    padding: 17px 40px;
+    border: 2px solid transparent;
+
+    @include sm {
+      display: block;
+      margin: 0 auto;
+    }
+
+    &:hover {
+      background-color: var(--primary-color-2);
+      color: #1c1c1c;
+      border-color: #fff;
+    }
+  }
+}

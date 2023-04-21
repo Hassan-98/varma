@@ -1,0 +1,47 @@
+@import "../../../styles/mixins.scss";
+
+.working_hours {
+  margin: 50px 0 120px;
+  padding: 180px 0;
+  transition: unset;
+  background-size: cover;
+  border-radius: 5px;
+
+  @include sm {
+    padding: 140px 0;
+  }
+
+  .box {
+    background-color: #fff;
+    padding: 50px;
+    width: 400px;
+    margin: auto;
+    text-align: center;
+
+    @include sm {
+      width: auto;
+      margin: 0 15px;
+    }
+
+    h3 {
+      font-weight: bold;
+      color: #1c1c1c;
+      margin: 10px auto 20px;
+      text-align: center;
+    }
+
+    .sub_title {
+      letter-spacing: 5px;
+      color: #1c1c1c;
+      text-transform: uppercase;
+      width: fit-content;
+      margin: 0 auto 20px;
+      padding: 3px 12px;
+      border: 1px solid #CECECE;
+    }
+
+    p:not(.sub_title) {
+      font-size: 14px;
+    }
+  }
+}

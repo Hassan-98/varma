@@ -1,0 +1,144 @@
+@import "../../../styles/mixins.scss";
+
+.specialcare {
+  padding: 80px 0 180px;
+
+  @include sm {
+    padding-top: 0;
+    padding-bottom: 120px;
+  }
+
+  .info {
+    .sub_title {
+      letter-spacing: 7px;
+      color: #1c1c1c;
+      text-transform: uppercase;
+      width: fit-content;
+      margin: 0 0 20px;
+      padding: 4px 15px;
+      border: 1px solid #CECECE;
+
+      @include sm {
+        margin: 0 auto 20px;
+      }
+    }
+
+    h3 {
+      font-size: 36px;
+      max-width: 80%;
+      font-weight: bold;
+      color: #1c1c1c;
+      margin: 10px 0 25px;
+
+      @include sm {
+        max-width: 100%;
+        font-size: 28px;
+        text-align: center;
+      }
+
+      @include xs {
+        font-size: 26px;
+      }
+    }
+
+    p:not(.sub_title) {
+      color: #545454;
+      max-width: 80%;
+      margin-bottom: 10px;
+
+      strong {
+        color: var(--primary-color-1);
+      }
+
+      @include sm {
+        text-align: center;
+        max-width: 100%;
+      }
+    }
+
+    ul {
+      margin: 35px 0 0;
+
+      li {
+        margin-bottom: 20px;
+        font-size: 17px;
+        color: #000;
+        font-weight: 500;
+
+        @include sm {
+          text-align: center;
+        }
+
+        i {
+          color: var(--primary-color-2);
+          font-size: 18px;
+          position: relative;
+          top: 1px;
+          margin-inline-end: 10px;
+        }
+      }
+    }
+
+    button {
+      margin-top: 35px;
+      background-color: var(--primary-color-1);
+      color: #fff;
+      padding: 17px 40px;
+      border: 2px solid transparent;
+
+      @include sm {
+        margin: 35px auto 0;
+        display: block;
+        padding: 13px 35px;
+      }
+
+      &:hover {
+        background-color: var(--primary-color-2);
+        color: #1c1c1c;
+        border-color: #fff;
+      }
+    }
+  }
+
+  .images {
+    display: flex;
+    position: relative;
+    gap: 20px;
+
+    img {
+      width: 50%;
+
+      @include xs {
+        height: 400px;
+      }
+    }
+
+    .doc_name {
+      background-color: #1c1c1c;
+      padding: 15px 35px;
+      position: absolute;
+      bottom: 20%;
+      left: 50%;
+      transform: translateX(-50%);
+
+      @include xxs {
+        padding: 10px 25px;
+        width: 60%;
+      }
+
+      p {
+        color: #fff;
+        font-size: 22px;
+        font-weight: 600;
+
+        @include xs {
+          font-size: 18px;
+        }
+      }
+
+      span {
+        color: #9A9A9A;
+      }
+    }
+  }
+}

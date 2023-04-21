@@ -1,0 +1,122 @@
+@import "../../../styles/mixins.scss";
+
+.feedback {
+  padding: 120px 0;
+
+  .sub_title {
+    letter-spacing: 7px;
+    color: #1c1c1c;
+    text-transform: uppercase;
+    width: fit-content;
+    margin: 0 auto 20px;
+    padding: 4px 15px;
+    border: 1px solid #CECECE;
+
+    @include sm {
+      margin: 0 auto 20px;
+    }
+  }
+
+  h3 {
+    font-size: 36px;
+    max-width: 50%;
+    font-weight: bold;
+    color: #1c1c1c;
+    margin: 10px auto 70px;
+    text-align: center;
+
+    @include lg {
+      max-width: 60%;
+    }
+
+    @include md {
+      max-width: 70%;
+    }
+
+    @include sm {
+      max-width: 100%;
+      font-size: 28px;
+    }
+
+    @include xs {
+      font-size: 26px;
+      margin: 10px auto 40px;
+    }
+  }
+
+  .item {
+    padding: 45px;
+    background-color: #F1F1F1;
+    position: relative;
+    border: 1px solid transparent;
+
+    &:hover {
+      scale: 1.03;
+      border-color: var(--primary-color-1);
+    }
+
+    @include xxs {
+      padding: 35px;
+    }
+
+    &>i {
+      position: absolute;
+      top: 35px;
+      right: 45px;
+      font-size: 60px;
+      color: var(--primary-color-1);
+
+      @include xs {
+        font-size: 40px;
+        top: 40px;
+        right: 20px;
+      }
+
+      @include xxs {
+        display: none;
+      }
+    }
+
+    .meta {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      img {
+        border-radius: 50%;
+      }
+
+      .name {
+        font-size: 19px;
+        color: #1c1c1c;
+        font-weight: bold;
+        margin: 0;
+      }
+
+      .position {
+        margin: 0;
+      }
+    }
+
+    hr {
+      border-color: #aaa;
+      margin: 20px 0;
+    }
+
+    .feedback_text {
+      color: #545454;
+      line-height: 25px;
+      margin-bottom: 25px;
+    }
+
+    .stars {
+      display: flex;
+      gap: 5px;
+
+      i {
+        color: #FBB837;
+        font-size: 25px;
+      }
+    }
+  }
+}
