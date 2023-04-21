@@ -7,7 +7,7 @@ import classes from './doctors.module.scss';
 
 
 interface IProps {
-  atServicesPage: boolean;
+  atServicesPage?: boolean;
 }
 
 function Doctors({ atServicesPage }: IProps) {

@@ -9,7 +9,7 @@ import servicesData from './data.json';
 import classes from './services.module.scss';
 
 interface IProps {
-  atServicesPage: boolean;
+  atServicesPage?: boolean;
 }
 
 function Services({ atServicesPage }: IProps) {
